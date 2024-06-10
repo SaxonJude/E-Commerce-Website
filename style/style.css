@@ -112,7 +112,7 @@ nav svg {
 }
 
 .hero .hero-container p {
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .product-showcase {
@@ -237,7 +237,7 @@ nav svg {
 }
 
 .favourite .favourite-description {
-  margin: 2rem 0;
+  margin: 2rem 0 3rem 0;
 }
 
 .favourite .favourite-container-cards {
@@ -262,6 +262,7 @@ nav svg {
 
 .favourite .favourite-container-cards .favourite-card img {
   max-height: 350px;
+  margin-bottom: 1rem;
 }
 
 .review .review-left {
@@ -436,5 +437,21 @@ footer .footer-links-container .footer-links-right .footer-links-section li {
 footer .footer-bottom .language,
 footer .footer-bottom .social-media {
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-container {
+    padding: 4rem !important;
+  }
+  .hero-container p {
+    max-width: 500px;
+  }
+  .product-showcase {
+    height: 500px;
+  }
+  .about,
+  .review {
+    padding: 4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

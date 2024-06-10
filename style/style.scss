@@ -88,7 +88,7 @@ nav {
         font-size: 5rem;
         }
         p {
-            margin: 1rem 0 0 0;
+            margin: 1rem 0 2rem 0;
             // border: 1px solid red;
         }
     }
@@ -160,7 +160,7 @@ nav {
     text-align: center;
     padding: 2rem;
     .favourite-description {
-        margin: 2rem 0;
+        margin: 2rem 0 3rem 0;
     }
     .favourite-container-cards {
         // border: 1px solid red;
@@ -171,6 +171,7 @@ nav {
             margin-bottom: 2rem;
             img {
                 max-height: 350px;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -179,7 +180,6 @@ nav {
 // REVIEW SECTION
 
 .review {
-    // border: 1px solid black;
     .review-left {
         @include flex(column, space-between);
         height: 100%;
@@ -297,5 +297,25 @@ footer {
         .social-media {
             display: none;
         }
+    }
+}
+
+// Responsive Design
+
+@media only screen and (min-width: 768px) {
+    .hero-container {
+        padding: 4rem !important;
+        p {
+            max-width: 500px;
+        }
+    }
+
+    .product-showcase {
+        height: 500px;
+    }
+
+    .about,
+    .review {
+        padding: 4rem;
     }
 }
