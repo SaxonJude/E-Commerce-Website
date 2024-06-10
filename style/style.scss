@@ -59,7 +59,7 @@ nav {
     padding: 0rem 2rem;
     .nav-container {
         width: 100%;
-        max-width: 1660px !important;
+        max-width: 1400px !important;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -118,6 +118,9 @@ nav {
         padding: 1rem 0;
         text-align: center;
     }
+    img {
+        width: 150px;
+    }
 }
 
 // SALES CARDS
@@ -130,6 +133,7 @@ nav {
     .cards-container {
         @include flex(column, space-around);
         height: 100%;
+        max-width: 1400px;
         .card {
             @include flex(column);
             width: 60%;
@@ -159,7 +163,7 @@ nav {
     }
     .favourite-container-cards {
         height: 100%;
-        @include flex(column, space-around);
+        @include flex(column, space-evenly);
         .favourite-card {
             margin-bottom: 2rem;
             img {
@@ -221,6 +225,7 @@ nav {
         margin-bottom: 2.5rem
     }
     .article-container {
+        max-width: 1400px !important;
         width: 100%;
         @include flex(column, center);
         .cards-container {
@@ -251,6 +256,8 @@ nav {
 footer {
     padding: 2rem;
     background-color: $background-colour;
+    .footer-container {
+        max-width: 1400px;
     .footer-logo {
         margin-bottom: 1rem;
         h2 {
@@ -279,12 +286,14 @@ footer {
             }
         }
     }
+    }
 }
 
 .footer-bottom {
     background-color: $background-colour;
     .footer-bottom-container {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
+        max-width: 1400px;
     }
     .language,
     .social-media {
@@ -358,6 +367,10 @@ footer {
         }
     }
 
+    .about img {
+        width: 200px;
+    }
+
     .review span {
         margin: 2rem 0 1rem 0 !important;
     }
@@ -379,12 +392,14 @@ footer {
 
     .favourite-container {
         width: 100%;
+        @include flex(column, center);
         .favourite-container-cards {
+            width: 100%;
+            max-width: 1400px;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: end;
             .favourite-card {
-                // border: 1px solid green;
                 min-height: 100%;
             }
             img {
@@ -399,6 +414,7 @@ footer {
             flex-direction: row !important;
             justify-content: space-between !important;
             width: 100%;
+            max-width: 1400px;
             .article-cards {
                 margin-bottom: 0 !important;
                 max-width: 250px;
@@ -407,18 +423,21 @@ footer {
     }
 
     footer {
-        @include flex(row, space-between, start);
+        @include flex(row, center, center);
         padding: 3rem 6rem 8rem 6rem !important;
-        .footer-logo p {
-            max-width: 300px;
-        }
-        .footer-links-container {
-            // padding: 0 2rem 2rem 2rem;
-            width: 60%;
+        .footer-container {
             @include flex(row, space-between, start);
-            .footer-links-left,
-            .footer-links-right {
-                width: 100%;
+            width: 100%;
+            .footer-logo p {
+                max-width: 300px;
+            }
+            .footer-links-container {
+                width: 60%;
+                @include flex(row, space-between, start);
+                .footer-links-left,
+                .footer-links-right {
+                    width: 100%;
+                }
             }
         }
     }
@@ -465,5 +484,21 @@ footer {
         .card {
             width: 20% !important;
         }
+    }
+
+    .article-cards {
+        max-width: 300px !important;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .product-showcase {
+        height: 1000px;
+    }
+}
+
+@media only screen and (min-width: 1660px) {
+    .product-showcase {
+        height: 1100px;
     }
 }
