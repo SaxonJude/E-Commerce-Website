@@ -115,6 +115,14 @@ nav svg {
   margin: 1rem 0 2rem 0;
 }
 
+.hero .hero-container h1,
+.hero .hero-container p {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
 .product-showcase {
   background-image: url("/assets/hero.png");
   background-color: #cccccc;
@@ -691,6 +699,22 @@ footer .footer-links-container .footer-links-right .footer-links-section li {
   }
   .footer-bottom .footer-bottom-container .social-media {
     width: 15%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero h1 {
+    font-size: 8rem !important;
+    line-height: 6.5rem;
+  }
+  .product-showcase {
+    height: 750px;
+  }
+  .cards {
+    padding: 6rem 4rem;
+  }
+  .cards .card {
+    width: 20% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
